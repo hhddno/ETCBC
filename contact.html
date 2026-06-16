@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez ETCBC — Hadrien Turpin, charpentier à Jumilhac-le-Grand. Devis gratuit. 06 19 85 61 22">
+  <title>Contact — ETCBC Jumilhac-le-Grand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Accueil</a> <span>/</span> <span>Contact</span>
+        </nav>
+        <h1>Contactez ETCBC</h1>
+        <p><strong>Hadrien Turpin</strong> — Entreprise Turpin Construction Bois Charpente<br>Pour vos travaux de charpente, construction bois, couverture et menuiseries à Jumilhac-le-Grand.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-card reveal">
+            <h3>Nos coordonnées</h3>
+            <div class="contact-item">
+              <div class="contact-item-icon">&#128205;</div>
+              <div>
+                <p><strong>Adresse</strong><br>210 route du parc naturel<br>24630 Jumilhac-le-Grand</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">&#128222;</div>
+              <div>
+                <p><strong>Téléphone</strong><br><a href="tel:+33619856122">06 19 85 61 22</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">&#9993;</div>
+              <div>
+                <p><strong>Email</strong><br><a href="mailto:contact@etcbc-charpente.fr">contact@etcbc-charpente.fr</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">&#127760;</div>
+              <div>
+                <p><strong>Site web</strong><br><a href="https://www.etcbc-charpente.fr" target="_blank" rel="noopener">www.etcbc-charpente.fr</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">&#128196;</div>
+              <div>
+                <p><strong>SIRET</strong><br>931 522 700 00018</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">&#128337;</div>
+              <div>
+                <p><strong>Zone d'intervention</strong><br>Dordogne et rayon de 50 km autour de Jumilhac-le-Grand</p>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=210+route+du+parc+naturel+24630+Jumilhac-le-Grand" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:1rem">Voir sur Google Maps</a>
+          </div>
+
+          <div class="contact-form reveal">
+            <h3>Formulaire de contact</h3>
+            <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.95rem">Vous avez des questions ou des besoins particuliers ? Laissez-nous un message. Nous vous répondrons rapidement.</p>
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nom">Nom *</label>
+                  <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom *</label>
+                  <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required placeholder="votre@email.fr">
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Téléphone</label>
+                  <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="service">Type de projet</label>
+                <select id="service" name="service">
+                  <option value="">Sélectionnez un service</option>
+                  <option value="charpente">Charpente</option>
+                  <option value="combles">Aménagement de combles</option>
+                  <option value="construction-bois">Construction bois</option>
+                  <option value="couverture">Couverture</option>
+                  <option value="menuiseries">Menuiseries</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required placeholder="Décrivez votre projet..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary" style="width:100%">Envoyer ma demande</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="zone-map reveal" style="margin-top:3rem;height:350px">
+          <iframe
+            title="Localisation ETCBC — Jumilhac-le-Grand"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=1.04%2C45.31%2C1.07%2C45.34&layer=mapnik&marker=45.3244%2C1.0553"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
