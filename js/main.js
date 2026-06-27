@@ -17,8 +17,7 @@ const SITE = {
   logo: 'images/logo.png',
   logoFallback: 'images/logo.webp',
   partnerLogo: 'https://local-fr-public.s3.eu-west-3.amazonaws.com/prod/webtool/userfiles/137031/refonte/logo%20comblesdenfrance.png',
-  /** FormSubmit : envoi via bulletonsite@gmail.com (activé) + copie client */
-  formEndpoint: 'https://formsubmit.co/ajax/bulletonsite@gmail.com',
+  clientEmail: 'contact@etcbc-charpente.fr',
 };
 
 const NAV_ITEMS = [
@@ -461,7 +460,7 @@ function initContactForm() {
     }
 
     try {
-      const res = await fetch(SITE.formEndpoint, {
+      const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(SITE.clientEmail)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
@@ -473,7 +472,6 @@ function initContactForm() {
           Message: message,
           _subject: `[ETCBC] Demande de contact — ${prenom} ${nom}`,
           _replyto: email,
-          _cc: SITE.email,
           _captcha: 'false',
           _template: 'table',
         }),
