@@ -1,4 +1,6 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -6,8 +8,39 @@
         {
           "key": "Content-Security-Policy",
           "value": "frame-ancestors 'self' https://bulletonsite.vercel.app https://bulletonsite.com https://www.bulletonsite.com http://localhost:3000"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         }
       ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/charpente.html", "destination": "/charpente", "permanent": true },
+    { "source": "/amenagement-combles.html", "destination": "/amenagement-combles", "permanent": true },
+    { "source": "/construction-bois.html", "destination": "/construction-bois", "permanent": true },
+    { "source": "/couverture.html", "destination": "/couverture", "permanent": true },
+    { "source": "/menuiseries.html", "destination": "/menuiseries", "permanent": true },
+    { "source": "/realisations.html", "destination": "/realisations", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/mentions-legales.html", "destination": "/mentions-legales", "permanent": true }
   ]
 }

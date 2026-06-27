@@ -21,21 +21,21 @@ const SITE = {
 };
 
 const NAV_ITEMS = [
-  { href: 'index.html', label: 'Accueil' },
-  { href: 'charpente.html', label: 'Charpente' },
-  { href: 'amenagement-combles.html', label: 'Combles' },
-  { href: 'construction-bois.html', label: 'Construction bois' },
-  { href: 'couverture.html', label: 'Couverture' },
-  { href: 'menuiseries.html', label: 'Menuiseries' },
-  { href: 'realisations.html', label: 'Nos réalisations' },
-  { href: 'contact.html', label: 'Contact' },
+  { href: '/', label: 'Accueil' },
+  { href: '/charpente', label: 'Charpente' },
+  { href: '/amenagement-combles', label: 'Combles' },
+  { href: '/construction-bois', label: 'Construction bois' },
+  { href: '/couverture', label: 'Couverture' },
+  { href: '/menuiseries', label: 'Menuiseries' },
+  { href: '/realisations', label: 'Nos réalisations' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const DOMAINS = [
   {
     id: 'charpente',
     title: 'Charpente',
-    href: 'charpente.html',
+    href: '/charpente',
     image: 'images/gallery/realisation-10.webp',
     intro: 'Fabrication, pose, rénovation et modification de charpentes pour le neuf comme la rénovation.',
     skills: ['Charpentes traditionnelles', 'Fermettes & lamellé-collé', 'Carports, hauts-vents & terrasses', 'Aménagement de combles'],
@@ -44,7 +44,7 @@ const DOMAINS = [
   {
     id: 'amenagement-combles',
     title: 'Aménagement de combles',
-    href: 'amenagement-combles.html',
+    href: '/amenagement-combles',
     image: 'images/gallery/realisation-11.webp',
     intro: 'Transformation de combles en espaces habitables, en partenariat avec Combles d\'en France.',
     skills: ['Étude de faisabilité', 'Renforcement de charpente', 'Poutre espace', 'Fermettes & combles perdus'],
@@ -53,7 +53,7 @@ const DOMAINS = [
   {
     id: 'construction-bois',
     title: 'Construction bois',
-    href: 'construction-bois.html',
+    href: '/construction-bois',
     image: 'images/gallery/realisation-18.webp',
     intro: 'Maisons à ossature bois, extensions et surélévations réalisées sur mesure.',
     skills: ['Maisons ossature bois', 'Agrandissements & extensions', 'Surélévation de bâtiments', 'Construction clé en main'],
@@ -62,7 +62,7 @@ const DOMAINS = [
   {
     id: 'couverture',
     title: 'Couverture',
-    href: 'couverture.html',
+    href: '/couverture',
     image: 'images/gallery/realisation-06.webp',
     intro: 'Création et rénovation de toitures avec des matériaux durables et esthétiques.',
     skills: ['Tuiles mécaniques & plates', 'Ardoise & zinc', 'Bac acier', 'Rénovation complète de toiture'],
@@ -71,7 +71,7 @@ const DOMAINS = [
   {
     id: 'menuiseries',
     title: 'Menuiseries',
-    href: 'menuiseries.html',
+    href: '/menuiseries',
     image: 'images/gallery/realisation-04.webp',
     intro: "Menuiseries sur mesure en bois pour l'intérieur comme l'extérieur.",
     skills: ['Fenêtres & portes', 'Escaliers & aménagements', 'Terrasses en bois', 'Ouvrages extérieurs'],
@@ -123,7 +123,7 @@ const REVIEWS = [
 ];
 
 function getCurrentPage() {
-  const path = window.location.pathname.split('/').pop() || 'index.html';
+  let path = window.location.pathname.replace(/\/$/, '') || '/';
   return path;
 }
 
@@ -136,7 +136,7 @@ function renderHeader() {
   return `
     <header class="site-header" id="siteHeader">
       <div class="header-layout">
-        <a href="index.html" class="site-logo" aria-label="Accueil ETCBC">
+        <a href="/" class="site-logo" aria-label="Accueil ETCBC">
           <img src="${SITE.logo}" alt="${SITE.fullName}" onerror="this.onerror=null;this.src='${SITE.logoFallback}'">
         </a>
         <div class="header-aside">
@@ -146,7 +146,7 @@ function renderHeader() {
                 <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>${SITE.phone}</span>
               </a>
-              <a href="contact.html" class="btn btn-primary header-cta">Devis gratuit</a>
+              <a href="/contact" class="btn btn-primary header-cta">Devis gratuit</a>
             </div>
             <nav class="header-nav" id="navbar" aria-label="Navigation principale">
               <div class="nav-links" id="navLinks">${navLinks}</div>
@@ -180,9 +180,9 @@ function renderFooter() {
           </div>
           <div class="footer-links">
             <h4>Navigation</h4>
-            <a href="index.html">Accueil</a>
-            <a href="realisations.html">Nos réalisations</a>
-            <a href="contact.html">Contact</a>
+            <a href="/">Accueil</a>
+            <a href="/realisations">Nos réalisations</a>
+            <a href="/contact">Contact</a>
           </div>
           <div class="footer-links">
             <h4>Contact</h4>
@@ -193,7 +193,7 @@ function renderFooter() {
         </div>
         <div class="footer-bottom">
           <span>&copy; ${new Date().getFullYear()} ${SITE.name} — ${SITE.fullName}</span>
-          <a href="mentions-legales.html">Mentions légales &amp; confidentialité</a>
+          <a href="/mentions-legales">Mentions légales &amp; confidentialité</a>
         </div>
       </div>
     </footer>

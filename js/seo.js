@@ -74,7 +74,7 @@ const PAGE_SEO = {
   charpente: {
     breadcrumbs: [
       { name: 'Accueil', path: '/' },
-      { name: 'Charpente', path: '/charpente.html' },
+      { name: 'Charpente', path: '/charpente' },
     ],
     service: {
       name: 'Charpente',
@@ -85,7 +85,7 @@ const PAGE_SEO = {
   'amenagement-combles': {
     breadcrumbs: [
       { name: 'Accueil', path: '/' },
-      { name: 'Aménagement de combles', path: '/amenagement-combles.html' },
+      { name: 'Aménagement de combles', path: '/amenagement-combles' },
     ],
     service: {
       name: 'Aménagement de combles',
@@ -96,7 +96,7 @@ const PAGE_SEO = {
   'construction-bois': {
     breadcrumbs: [
       { name: 'Accueil', path: '/' },
-      { name: 'Construction bois', path: '/construction-bois.html' },
+      { name: 'Construction bois', path: '/construction-bois' },
     ],
     service: {
       name: 'Construction bois',
@@ -107,7 +107,7 @@ const PAGE_SEO = {
   couverture: {
     breadcrumbs: [
       { name: 'Accueil', path: '/' },
-      { name: 'Couverture', path: '/couverture.html' },
+      { name: 'Couverture', path: '/couverture' },
     ],
     service: {
       name: 'Couverture',
@@ -118,7 +118,7 @@ const PAGE_SEO = {
   menuiseries: {
     breadcrumbs: [
       { name: 'Accueil', path: '/' },
-      { name: 'Menuiseries', path: '/menuiseries.html' },
+      { name: 'Menuiseries', path: '/menuiseries' },
     ],
     service: {
       name: 'Menuiseries',
@@ -129,14 +129,14 @@ const PAGE_SEO = {
   realisations: {
     breadcrumbs: [
       { name: 'Accueil', path: '/' },
-      { name: 'Nos réalisations', path: '/realisations.html' },
+      { name: 'Nos réalisations', path: '/realisations' },
     ],
     service: null,
   },
   contact: {
     breadcrumbs: [
       { name: 'Accueil', path: '/' },
-      { name: 'Contact', path: '/contact.html' },
+      { name: 'Contact', path: '/contact' },
     ],
     service: null,
   },
