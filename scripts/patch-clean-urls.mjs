@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const root = join(__dir, '..');
-const BASE = 'https://www.etcbc-charpente.fr';
+const BASE = 'https://www.etcbc-charpente.com';
 
 const PAGE_MAP = [
   ['index.html', '/'],

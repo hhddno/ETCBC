@@ -1,6 +1,6 @@
 /* ETCBC — Données structurées JSON-LD pour le référencement */
 
-const SEO_BASE = 'https://www.etcbc-charpente.fr';
+const SEO_BASE = 'https://www.etcbc-charpente.com';
 
 const LOCAL_BUSINESS = {
   '@context': 'https://schema.org',

@@ -8,7 +8,7 @@ const SITE = {
   phone: '06 19 85 61 22',
   phoneLink: 'tel:+33619856122',
   email: 'contact@etcbc-charpente.fr',
-  website: 'www.etcbc-charpente.fr',
+  website: 'www.etcbc-charpente.com',
   address: '210 route du parc naturel',
   city: '24630 Jumilhac-le-Grand',
   location: 'Jumilhac-le-Grand',
