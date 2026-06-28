@@ -1,4 +1,6 @@
-# ETCBC — Documentation projet
+# ETCBC
+
+![www.etcbc-charpente.com](docs/screenshot.png)
 
 Site professionnel pour **ETCBC** (Entreprise Turpin Construction Bois Charpente) — charpentier, couvreur et menuisier à Jumilhac-le-Grand (Dordogne).
 
@@ -6,36 +8,31 @@ Site professionnel pour **ETCBC** (Entreprise Turpin Construction Bois Charpente
 |---|---|
 | **URL production** | https://www.etcbc-charpente.com |
 | **Dépôt GitHub** | [github.com/dariohd/ETCBC](https://github.com/dariohd/ETCBC) |
+| **Notes techniques** | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
 | **Hébergement** | Vercel |
 | **Création** | [Bulle ton site](https://bulletonsite.com) — Hugo Davion |
 
----
-
-## Stack technique
+## Stack
 
 - HTML5, CSS3, JavaScript vanilla (modules ES)
 - Polices auto-hébergées (`/fonts/`)
-- Galerie chantiers filtrable (données JSON + JS)
+- Galerie chantiers filtrable (`data/realisations.json` + JS)
 - Formulaire contact → **FormSubmit** (`contact@etcbc-charpente.fr`)
-- **sharp** (Node) pour scripts d'optimisation images
+- **sharp** (Node) pour les scripts d'optimisation images
 - Vercel : clean URLs, CSP iframe, cache assets
-
----
 
 ## Fonctionnalités
 
 - **6 métiers** : charpente, aménagement combles, construction bois, couverture, menuiseries, réalisations
-- **Galerie filtrable** par type de chantier (`realisations.html` + `data/realisations.json`)
+- **Galerie filtrable** par type de chantier (`realisations.html`)
 - **Zone d'intervention** : carte OpenStreetMap intégrée
 - **FAQ** structurée (SEO local Dordogne)
 - **Devis / contact** : formulaire avec notification email client
 - SEO : JSON-LD (`js/seo.js`), canonicals, `sitemap.xml`, meta Open Graph
-- **Mentions légales** complètes (LCEN, RGPD, cookies)
+- **Mentions légales** (LCEN, RGPD, cookies)
 - Responsive : 1100 / 1024 / 768 / 480 px
 
----
-
-## Structure du projet
+## Structure
 
 ```
 ETCBC/
@@ -47,25 +44,17 @@ ETCBC/
 ├── js/main.js, seo.js
 ├── data/realisations.json
 ├── fonts/
-├── images/gallery/     # WebP chantiers
+├── images/gallery/
 ├── scripts/
-│   ├── vendor-fonts.mjs
-│   ├── patch-clean-urls.mjs
-│   ├── download-photos.mjs
-│   └── process-logo.mjs
 ├── vercel.json
 ├── sitemap.xml
 └── robots.txt
 ```
 
----
-
 ## Prérequis
 
 - Node.js 18+ (scripts images / polices)
 - Compte Vercel + domaine `etcbc-charpente.com`
-
----
 
 ## Développement local
 
@@ -74,11 +63,9 @@ npm install          # sharp pour les scripts
 npx serve . -l 3457
 ```
 
-→ **http://localhost:3457**
+→ http://localhost:3457
 
 Ne pas ouvrir `index.html` directement (modules ES + chemins absolus).
-
----
 
 ## Scripts de maintenance
 
@@ -89,9 +76,7 @@ node scripts/download-photos.mjs    # Import photos galerie
 node scripts/process-logo.mjs       # Optimisation logo
 ```
 
----
-
-## Variables & services
+## Services externes
 
 | Service | Détail |
 |---------|--------|
@@ -101,36 +86,29 @@ node scripts/process-logo.mjs       # Optimisation logo
 
 Configuration site : constante `SITE` dans `js/main.js`.
 
----
-
 ## Déploiement
 
-1. `git push origin main` → build Vercel automatique
-2. Vérifier :
-   - https://www.etcbc-charpente.com/charpente (sans `.html`)
-   - Redirections 301 depuis anciennes URLs `.html`
-   - Formulaire contact → email Hadrien Turpin
-   - Galerie filtres fonctionnels
+Push `main` → build Vercel automatique.
 
----
+À vérifier après deploy :
+- https://www.etcbc-charpente.com/charpente (sans `.html`)
+- Redirections 301 depuis les anciennes URLs `.html`
+- Formulaire contact → email Hadrien Turpin
+- Galerie et filtres
 
-## SEO & données structurées
+## SEO
 
 - `js/seo.js` : LocalBusiness, FAQ, WebSite, BreadcrumbList
-- URL de base canonique : `https://www.etcbc-charpente.com`
+- URL canonique : `https://www.etcbc-charpente.com`
 - Sitemap : 8 pages indexables
-
----
 
 ## Conformité
 
 - `/mentions-legales` : éditeur ETCBC, hébergeur Vercel, FormSubmit, CNIL
 - Crédit : Bulle ton site
-- Polices : hébergement local (pas de Google Fonts)
+- Polices hébergées localement (pas de Google Fonts)
 
----
-
-## Contact projet
+## Contact
 
 - **Client** : Hadrien Turpin — ETCBC, Jumilhac-le-Grand
 - **Email** : contact@etcbc-charpente.fr
