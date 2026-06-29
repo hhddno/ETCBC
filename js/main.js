@@ -7,7 +7,7 @@ const SITE = {
   siret: '931 522 700 00018',
   phone: '06 19 85 61 22',
   phoneLink: 'tel:+33619856122',
-  email: 'contact@etcbc-charpente.fr',
+  email: 'contact@etcbc-charpente.com',
   website: 'www.etcbc-charpente.com',
   address: '210 route du parc naturel',
   city: '24630 Jumilhac-le-Grand',
@@ -17,7 +17,7 @@ const SITE = {
   logo: 'images/logo.png',
   logoFallback: 'images/logo.webp',
   partnerLogo: 'https://local-fr-public.s3.eu-west-3.amazonaws.com/prod/webtool/userfiles/137031/refonte/logo%20comblesdenfrance.png',
-  clientEmail: 'contact@etcbc-charpente.fr',
+  clientEmail: 'contact@etcbc-charpente.com',
 };
 
 const NAV_ITEMS = [
@@ -211,7 +211,6 @@ function renderReviews() {
         <div class="review-card-inner">
           <p class="review-text">${r.text}</p>
           <div class="review-author">
-            <img src="${r.avatar}" alt="${r.name}" width="48" height="48" loading="lazy">
             <div class="review-author-info">
               <div class="name">${r.name}</div>
               <div class="source">Avis Google</div>
@@ -253,7 +252,7 @@ function renderReviews() {
 
 function initDomainsHome() {
   const container = document.getElementById('domainsGrid');
-  if (!container) return;
+  if (!container || container.children.length > 0) return;
 
   container.innerHTML = DOMAINS.map(
     (d) => `
@@ -392,6 +391,11 @@ async function initGalleryPage() {
   const grid = document.getElementById('galleryGrid');
   if (!grid) return;
 
+  if (grid.children.length > 0) {
+    initGalleryFilter();
+    return;
+  }
+
   try {
     const res = await fetch('data/gallery.json');
     const photos = await res.json();
@@ -518,9 +522,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerEl = document.getElementById('site-footer');
   const reviewsEl = document.getElementById('site-reviews');
 
-  if (headerEl) headerEl.innerHTML = renderHeader();
-  if (footerEl) footerEl.innerHTML = renderFooter();
-  if (reviewsEl) reviewsEl.innerHTML = renderReviews();
+  if (headerEl && !headerEl.querySelector('.site-header')) {
+    headerEl.innerHTML = renderHeader();
+  }
+  if (footerEl && !footerEl.querySelector('.footer')) {
+    footerEl.innerHTML = renderFooter();
+  }
+  if (reviewsEl && !reviewsEl.querySelector('.reviews')) {
+    reviewsEl.innerHTML = renderReviews();
+  }
 
   initDomainsHome();
   initNavigation();

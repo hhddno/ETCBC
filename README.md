@@ -17,7 +17,7 @@ Site professionnel pour **ETCBC** (Entreprise Turpin Construction Bois Charpente
 - HTML5, CSS3, JavaScript vanilla (modules ES)
 - Polices auto-hébergées (`/fonts/`)
 - Galerie chantiers filtrable (`data/realisations.json` + JS)
-- Formulaire contact → **FormSubmit** (`contact@etcbc-charpente.fr`)
+- Formulaire contact → **FormSubmit** (`contact@etcbc-charpente.com`)
 - **sharp** (Node) pour les scripts d'optimisation images
 - Vercel : clean URLs, CSP iframe, cache assets
 
@@ -80,7 +80,7 @@ node scripts/process-logo.mjs       # Optimisation logo
 
 | Service | Détail |
 |---------|--------|
-| **FormSubmit** | Emails vers `contact@etcbc-charpente.fr` uniquement |
+| **FormSubmit** | Emails vers `contact@etcbc-charpente.com` uniquement |
 | **OpenStreetMap** | Embed carte contact |
 | **Vercel** | Production + redirects clean URLs |
 
@@ -111,5 +111,5 @@ Push `main` → build Vercel automatique.
 ## Contact
 
 - **Client** : Hadrien Turpin — ETCBC, Jumilhac-le-Grand
-- **Email** : contact@etcbc-charpente.fr
+- **Email** : contact@etcbc-charpente.com
 - **Développement** : [bulletonsite.com](https://bulletonsite.com)

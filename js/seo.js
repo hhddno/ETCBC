@@ -12,7 +12,7 @@ const LOCAL_BUSINESS = {
     'Charpentier, couvreur et constructeur bois à Jumilhac-le-Grand (Dordogne). Charpente, construction bois, couverture, menuiseries et aménagement de combles.',
   url: SEO_BASE,
   telephone: '+33619856122',
-  email: 'contact@etcbc-charpente.fr',
+  email: 'contact@etcbc-charpente.com',
   image: `${SEO_BASE}/images/gallery/realisation-10.webp`,
   logo: `${SEO_BASE}/images/logo.png`,
   priceRange: '€€',
@@ -45,13 +45,6 @@ const LOCAL_BUSINESS = {
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     opens: '08:00',
     closes: '18:00',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    bestRating: '5',
-    worstRating: '1',
-    reviewCount: '8',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

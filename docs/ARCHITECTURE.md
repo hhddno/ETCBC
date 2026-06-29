@@ -12,7 +12,7 @@ Les réalisations sont dans `data/realisations.json`. `realisations.html` filtre
 
 ## Contact
 
-FormSubmit vers `contact@etcbc-charpente.fr`. Pas de base de données.
+FormSubmit vers `contact@etcbc-charpente.com`. Pas de base de données.
 
 ## Infra
 

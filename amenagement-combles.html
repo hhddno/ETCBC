@@ -26,16 +26,42 @@
   <link rel="apple-touch-icon" href="images/logo.png">
 </head>
 <body>
-  <div id="site-header"></div>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+  <div id="site-header">
+    <header class="site-header" id="siteHeader">
+      <div class="header-layout">
+        <a href="/" class="site-logo" aria-label="Accueil ETCBC">
+          <img src="images/logo.png" alt="Entreprise Turpin Construction Bois Charpente" width="160" height="184" onerror="this.onerror=null;this.src='images/logo.webp'">
+        </a>
+        <div class="header-aside">
+          <div class="header-content">
+            <div class="header-top">
+              <a href="tel:+33619856122" class="header-phone" aria-label="Appeler 06 19 85 61 22">
+                <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>06 19 85 61 22</span>
+              </a>
+              <a href="/contact" class="btn btn-primary header-cta">Devis gratuit</a>
+            </div>
+            <nav class="header-nav" id="navbar" aria-label="Navigation principale">
+              <div class="nav-links" id="navLinks"><a href="/" class="">Accueil</a><a href="/charpente" class="">Charpente</a><a href="/amenagement-combles" class="active">Combles</a><a href="/construction-bois" class="">Construction bois</a><a href="/couverture" class="">Couverture</a><a href="/menuiseries" class="">Menuiseries</a><a href="/realisations" class="">Nos réalisations</a><a href="/contact" class="">Contact</a></div>
+              <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
+                <span></span><span></span><span></span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </header></div>
 
-  <main>
+  <main id="main-content">
     <section class="page-hero">
       <div class="container">
         <nav class="breadcrumb">
           <a href="/">Accueil</a> <span>/</span> <span>Aménagement de combles</span>
         </nav>
-        <h1>Aménagement de combles près de Périgueux</h1>
-        <p>ETCBC, expert en aménagement de combles aux alentours de Périgueux, transforme vos espaces sous les toits en zones de vie fonctionnelles et esthétiques. Que vous souhaitiez créer une nouvelle chambre, un bureau ou une salle de jeux, nous avons les solutions adaptées à vos besoins.</p>
+        <h1>Aménagement de combles en Dordogne — Jumilhac-le-Grand</h1>
+        <p>ETCBC, expert en aménagement de combles à Jumilhac-le-Grand et aux alentours de Périgueux, transforme vos espaces sous les toits en zones de vie fonctionnelles et esthétiques. Que vous souhaitiez créer une nouvelle chambre, un bureau ou une salle de jeux, nous avons les solutions adaptées à vos besoins.</p>
       </div>
     </section>
 
@@ -70,7 +96,42 @@
     </section>
   </main>
 
-  <div id="site-footer"></div>
+  <div id="site-footer">
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="ETCBC" width="80" height="92" onerror="this.onerror=null;this.src='images/logo.webp'">
+            <p><strong>Entreprise Turpin Construction Bois Charpente</strong><br>Hadrien Turpin<br>SIRET : 931 522 700 00018</p>
+            <p style="margin-top:0.75rem">Charpente · Combles · Construction bois · Couverture · Menuiseries<br>210 route du parc naturel — 24630 Jumilhac-le-Grand</p>
+          </div>
+          <div class="footer-links">
+            <h4>Services</h4>
+            <a href="/charpente">Charpente</a><a href="/amenagement-combles">Aménagement de combles</a><a href="/construction-bois">Construction bois</a><a href="/couverture">Couverture</a><a href="/menuiseries">Menuiseries</a>
+          </div>
+          <div class="footer-links">
+            <h4>Navigation</h4>
+            <a href="/">Accueil</a>
+            <a href="/realisations">Nos réalisations</a>
+            <a href="/contact">Contact</a>
+          </div>
+          <div class="footer-links">
+            <h4>Contact</h4>
+            <a href="tel:+33619856122">06 19 85 61 22</a>
+            <a href="mailto:contact@etcbc-charpente.com" style="display:block;margin-top:0.35rem">contact@etcbc-charpente.com</a>
+            <p style="margin-top:0.5rem">210 route du parc naturel<br>24630 Jumilhac-le-Grand</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 ETCBC — Entreprise Turpin Construction Bois Charpente</span>
+          <a href="/mentions-legales">Mentions légales &amp; confidentialité</a>
+        </div>
+      </div>
+    </footer>
+    <div class="floating-cta">
+      <a href="tel:+33619856122" class="phone-btn" aria-label="Appeler">&#9742;</a>
+      <a href="#" class="top-btn" id="backToTop" aria-label="Retour en haut">&#8593;</a>
+    </div></div>
   <script src="js/seo.js"></script>
   <script src="js/main.js"></script>
 </body>
