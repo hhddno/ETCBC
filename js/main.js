@@ -1,5 +1,14 @@
 /* ETCBC — Main JavaScript */
 
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 const SITE = {
   name: 'ETCBC',
   fullName: 'Entreprise Turpin Construction Bois Charpente',
@@ -402,9 +411,9 @@ async function initGalleryPage() {
     grid.innerHTML = photos
       .map(
         (p) => `
-      <div class="gallery-item reveal" data-category="${p.category}">
-        <img src="${p.file}" alt="${p.alt}" width="400" height="300" loading="lazy">
-        <div class="gallery-item-overlay"><span>${p.label}</span></div>
+      <div class="gallery-item reveal" data-category="${escapeHtml(p.category)}">
+        <img src="${escapeHtml(p.file)}" alt="${escapeHtml(p.alt)}" width="400" height="300" loading="lazy">
+        <div class="gallery-item-overlay"><span>${escapeHtml(p.label)}</span></div>
       </div>`
       )
       .join('');
@@ -476,7 +485,7 @@ function initContactForm() {
           Message: message,
           _subject: `[ETCBC] Demande de contact — ${prenom} ${nom}`,
           _replyto: email,
-          _captcha: 'false',
+          _captcha: 'true',
           _template: 'table',
         }),
       });
